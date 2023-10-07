@@ -1,0 +1,237 @@
+body {
+    background: linear-gradient(45deg, skyblue, dodgerblue);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    background: rgba(50, 50, 50, .25);
+}
+
+.container .notalar, .container .tuslar {
+    border: 2px solid black;
+}
+
+.container .notalar {
+    height: 70vh;
+    width: 100vw;
+}
+
+.container .tuslar {
+    height: 30vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    z-index: 10;
+    background: lightslategray;
+}
+
+.container .tuslar .kutu {
+    height: 15vh;
+    width: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    border: 2px solid black;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: .2s;
+}
+
+.container .notalar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nota {
+    border: 2px solid black;
+    height: 100%;
+    width: 15vh;
+    position: relative;
+}
+
+.nota .kutu:not(.yukari) {
+    height: 15%;
+    width: 100%;
+    border-radius: 5px;
+    animation: nota 3s linear;
+    position: absolute;
+    top: 0;
+}
+
+.nota .kutu.yukari {
+    height: 15%;
+    width: 100%;
+    border-radius: 5px;
+    animation: tersNota 3s linear;
+    position: absolute;
+    top: 98%;
+}
+
+.nota.g .kutu {
+    background: orangered;
+}
+
+.nota.h .kutu {
+    background: yellow;
+}
+
+.nota.j .kutu {
+    background: violet;
+}
+
+.nota.k .kutu {
+    background: limegreen;
+}
+
+@keyframes nota {
+    from {
+        top: 0;
+    }
+    to {
+        top: 101%;
+    }
+}
+
+@keyframes tersNota {
+    from {
+        top: 99%;
+    }
+    to {
+        top: -20%;
+    }
+}
+
+.score {
+    position: fixed;
+    left: 1rem;
+    top: 1rem;
+    font-size: 1.25rem;
+}
+
+.ui {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: lightgray;
+    border-radius: 5px;
+    width: 18rem;
+    height: 30rem;
+    z-index: 15;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ui .sarkilar {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-size: 1.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.ui .sarkilar div {
+    padding: .5rem;
+    border-radius: 5px;
+    transition: .2s;
+    cursor: pointer;
+}
+
+.ui .sarkilar div:hover {
+    background: gray;
+}
+
+.sayac {
+    display: none;
+    font-size: 2.5rem;
+    color: white;
+    background: gray;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    height: 6rem;
+    width: 6rem;
+    z-index: 99;
+}
+
+.start {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: lightgray;
+    color: black;
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.start h1 {
+    font-size: 3rem;
+}
+
+.start a {
+    color: dodgerblue;
+    text-decoration: none;
+    transition: .2s;
+}
+
+.start a:hover {
+    text-decoration: underline;
+    letter-spacing: .1rem;
+}
+
+.start button.start-btn {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 1.5rem;
+    background: aliceblue;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, .1);
+    transition: .2s;
+    cursor: pointer;
+}
+
+.start button.start-btn:hover {
+    background: deepskyblue;
+}
+
+button.sarkiDegistir {
+    position: fixed;
+    right: 1rem;
+    top: 1rem;
+    font-size: 1.25rem;
+    border-radius: 5px;
+    border: none;
+    padding: .25rem;
+    cursor: pointer;
+}

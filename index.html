@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Ritim Oyunu</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="start">
+                <h1>4Key Music</h1>
+                <button class="start-btn" onclick="document.querySelector('.start').style.display = 'none';">Start</button>
+                <h2>Create music with just 4 notes!</h2>
+                <h2>by <a target="_blank" href="//adige.web.app">AdigeWeb</a></h2>
+            </div>
+            <div class="ui">
+                <div class="sarkilar"></div>
+            </div>
+            <div class="sayac">3</div>
+            <div class="score">
+                Score: <span>0</span>
+            </div>
+            <button class="sarkiDegistir">Switch Song</button>
+            <div class="notalar">
+                <div class="nota g"></div>
+                <div class="nota h"></div>
+                <div class="nota j"></div>
+                <div class="nota k"></div>
+            </div>
+            <div class="tuslar">
+                <div class="kutu g">G</div>
+                <div class="kutu h">H</div>
+                <div class="kutu j">J</div>
+                <div class="kutu k">K</div>
+            </div>
+        </div>
+    </body>
+</html>
+<script src="script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js" integrity="sha512-jduERlz7En1IUZR54bqzpNI64AbffZWR//KJgF71SJ8D8/liKFZ+s1RxmUmB+bhCnIfzebdZsULwOrbVB5f3nQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
